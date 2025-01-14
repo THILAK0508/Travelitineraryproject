@@ -1,8 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
+// Importing the routes
 const authRoutes = require("./middleware/authRoutes");
 const cardsRoutes = require("./routes/cards");
 const tripsRoutes = require("./routes/trips");
@@ -12,9 +14,10 @@ const checklistRoutes = require("./routes/checklist");
 const itineraryRoutes = require("./routes/itinerary");
 
 const app = express();
-const EventEmitter = require('events');
+const EventEmitter = require("events");
 const bus = new EventEmitter();
-bus.setMaxListeners(20)
+bus.setMaxListeners(20);
+
 // Middleware
 app.use(express.json());
 app.use(cors());
@@ -25,7 +28,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-// Routes
+// Routes for the APIs
 app.use("/api/auth", authRoutes);
 app.use("/api/cards", cardsRoutes);
 app.use("/api/trips", tripsRoutes);
@@ -34,8 +37,16 @@ app.use("/api/budgets", budgetsRoutes);
 app.use("/api/checklist", checklistRoutes);
 app.use("/api/itinerary", itineraryRoutes);
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "build")));
+
+// All other routes should serve the index.html file, for React Router to handle routing
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 // Server Setup
-const port = process.env.PORT ;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
