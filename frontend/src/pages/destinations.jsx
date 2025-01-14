@@ -12,7 +12,7 @@ function Destination() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch();
+        const response = await fetch(API_URL);
         const data = await response.json();
         setCardsData(data.cardsData);  // Data for popular destinations
         setNearYouData(data.nearYou);  // Data for "Near You"
