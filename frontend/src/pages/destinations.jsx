@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../css/destinations.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-const API_URL = "http://localhost:3000/api/cards";  // Change this if your server is hosted somewhere else
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = `http://${API_BASE_URL}/api/cards`;  // Change this if your server is hosted somewhere else
 
 function Destination() {
   const [cardsData, setCardsData] = useState([]);
@@ -11,7 +12,7 @@ function Destination() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch();
         const data = await response.json();
         setCardsData(data.cardsData);  // Data for popular destinations
         setNearYouData(data.nearYou);  // Data for "Near You"
