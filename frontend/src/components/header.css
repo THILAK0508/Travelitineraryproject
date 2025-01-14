@@ -1,0 +1,86 @@
+/* Header Section */
+header {
+    background: linear-gradient(90deg, #00bfff, #1e90ff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures header spans the full width */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+    margin: 0; /* Prevents extra margin that could cause space */
+}
+
+/* Logo Style */
+header .logo h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ensures the menu spans the full width */
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+.hamburger {
+    display: none; 
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        width: 90%; 
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .hamburger:hover{
+        cursor : pointer;
+    }
+}

@@ -1,0 +1,67 @@
+/* footer.css */
+.footer {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Skyblue background with gradient effect */
+    padding: 30px 20px;
+    color: #fff; /* White text */
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  .footer-info,
+  .footer-social {
+    flex: 1;
+    margin: 10px;
+    min-width: 220px; /* Ensuring minimum width for each section */
+  }
+  
+  .footer-info p,
+  .footer-social p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 5px 0;
+  }
+  
+  .footer-social {
+    text-align: center;
+  }
+  
+  .social-links {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.calendar {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calendar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.calendar h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Calendar Grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#calendar div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+#calendar div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #eef7ff;
+}
+
+#calendar div span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+/* Activities List */
+#calendar div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#calendar div ul li {
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form for Adding Activities */
+.calendar form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.calendar form input,
+.calendar form button {
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.calendar form input:focus,
+.calendar form button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.calendar form input {
+    flex: 1;
+    max-width: 300px;
+}
+
+.calendar form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.calendar form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calendar form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

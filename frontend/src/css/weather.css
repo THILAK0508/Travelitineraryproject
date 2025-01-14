@@ -1,0 +1,115 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.weather-info {
+    background-color: white;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.weather-info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Form Styles */
+.weather-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.weather-info form label {
+    font-weight: bold;
+    color: #555;
+}
+
+.weather-info form input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.weather-info form input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+    border-color: rgb(0, 191, 255);
+}
+
+.weather-info form button {
+    padding: 12px 15px;
+    background-color: rgb(0, 191, 255);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.weather-info form button:hover {
+    background-color: rgb(0, 170, 230);
+}
+
+/* Weather Result Section */
+.weather-result {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-result h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.weather-result p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+
+
+    .weather-info {
+        padding: 20px;
+    }
+
+    .weather-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-info form input,
+    .weather-info form button {
+        font-size: 0.9rem;
+    }
+}
