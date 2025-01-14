@@ -34,8 +34,9 @@ const Calendar = () => {
   };
 
   return (
-    <div className="container">
+    <>
         <Header />
+    <div className="container">
 
       <section className="calendar">
         <h2>Plan Your Activities</h2>
@@ -75,8 +76,9 @@ const Calendar = () => {
           <button type="submit">Add to Calendar</button>
         </form>
       </section>
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 };
 

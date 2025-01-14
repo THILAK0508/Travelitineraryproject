@@ -84,8 +84,9 @@ const Itinerary = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <Header />
+    <div className="container">
 
       <section className="itinerary">
         <h2>Your Planned Itinerary</h2>
@@ -129,8 +130,9 @@ const Itinerary = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 };
 

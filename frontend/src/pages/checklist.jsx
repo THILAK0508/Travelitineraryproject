@@ -73,8 +73,9 @@ const Checklist = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <Header />
+    <div className="container">
       <section className="packing-checklist">
       <h2>Create Your Packing List</h2>
 
@@ -118,9 +119,9 @@ const Checklist = () => {
       </ul>
 
       </section>
-      <Footer />
     </div>
+      <Footer />
+</>
   );
 };
-
 export default Checklist;
