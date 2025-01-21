@@ -75,7 +75,6 @@ const Budget = () => {
     }
   };
 
-  // Fetch saved budgets
   const fetchSavedBudgets = async () => {
     try {
       const token = localStorage.getItem('token');

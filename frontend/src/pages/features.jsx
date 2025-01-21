@@ -5,7 +5,6 @@ import "../css/features.css";
 const Features = () => {
   const navigate = useNavigate();
 
-  // List of features with corresponding routes
   const features = [
     { name: "Destinations", description: "Explore top travel spots worldwide.", icon: "🌍", route: "/destination" },
     { name: "Trip Planner", description: "Organize your entire trip in one place.", icon: "🗺️", route: "/planner" },
@@ -25,7 +24,7 @@ const Features = () => {
           <div
             key={index}
             className="feature-card"
-            onClick={() => navigate(feature.route)} // Use the route directly
+            onClick={() => navigate(feature.route)} 
           >
             <div className="feature-icon">{feature.icon}</div>
             <h3 className="feature-name">{feature.name}</h3>

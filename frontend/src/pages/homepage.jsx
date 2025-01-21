@@ -32,7 +32,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const token = localStorage.getItem("token"); // Get the token from localStorage
+        const token = localStorage.getItem("token"); 
         if (!token) {
           setError("No token found. Please log in.");
           return;
@@ -47,7 +47,7 @@ const Homepage = () => {
         const data = await response.json();
 
         if (response.ok) {
-          setUsername(data.username); // Set the username
+          setUsername(data.username); 
         } else {
           setError(data.message || "Failed to fetch user data.");
         }
@@ -62,17 +62,17 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Header />
-      {/* Welcome Section */}
+
       <div className="welcome">
        <h2>Welcome, {username}!</h2>
         <p>Plan your next adventure and organize all your travel details in one place.</p>
       </div>
 
-      {/* Travel Tips Section */}
+
       <Features />
 
       <div id="categories-wrapper">
-        {/* Cards Data Section */}
+        {/* Cards Data */}
         <div className="category-section">
           <h2>Popular Destinations</h2>
           <div className="grid-container">
@@ -86,7 +86,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        {/* You May Like Section */}
+        {/* You May Like  */}
         <div className="category-section">
           <h2>You May Like</h2>
           <div className="grid-container">
@@ -100,7 +100,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        {/* Near You Section */}
+        {/* Near You  */}
         <div className="category-section">
           <h2>Near You</h2>
           <div className="grid-container">
@@ -115,7 +115,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

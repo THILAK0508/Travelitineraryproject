@@ -37,15 +37,12 @@ app.use("/api/budgets", budgetsRoutes);
 app.use("/api/checklist", checklistRoutes);
 app.use("/api/itinerary", itineraryRoutes);
 
-// Serve static files from the React app
 app.use(express.static(path.join(__dirname, "build")));
 
-// All other routes should serve the index.html file, for React Router to handle routing
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// Server Setup
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
