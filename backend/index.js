@@ -22,7 +22,6 @@ bus.setMaxListeners(20);
 app.use(express.json());
 app.use(cors());
 
-// MongoDB Connection
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to MongoDB"))

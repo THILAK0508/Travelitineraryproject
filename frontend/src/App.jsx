@@ -13,6 +13,7 @@ import Login from "./pages/auth/login.jsx";
 import Signup from "./pages/auth/signup.jsx";
 import Logout from "./pages/auth/logout.jsx";
 import LandingPage from "./components/LandingPage.jsx";
+import ForgetPassword from "./pages/auth/forgetpassword.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx"; 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-
+        <Route path="/forgetpassword" element = {<ForgetPassword />}/>
         {/* Protected Routes */}
         <Route
           path="/home"
