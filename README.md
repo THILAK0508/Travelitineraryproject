@@ -44,4 +44,8 @@ AdventureAtlas  is a modern and interactive travel itinerary planner that allows
   - HTML5, CSS3, and JavaScript (for form handling and interactive behavior)
   - React.js (for state management and UI components)
   - Flexbox and Grid layouts for responsive design
-
+- **APIs and Libraries**
+  - OpenWeatherMap API (for weather info)
+  - Mongo Atlas (for storing user data in cloud)
+  - React Icons (for a clean and modern UI)
+  - Fetch (for making API calls)
